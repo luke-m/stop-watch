@@ -2,12 +2,16 @@ let startBt = document.querySelector('#start'),
     stopBt = document.querySelector('#stop'),
     clearBt = document.querySelector('#clear'),
     display = document.querySelector('#displaySeconds'),
-    seconds = 0,
+    seconds = "00.00",
     t;
 
 startBt.addEventListener('click', timer);
 stopBt.addEventListener('click', stop);
 clearBt.addEventListener('click', clear);
+
+window.addEventListener('load', function() {
+   display.textContent = seconds;
+});
 
 function add() {
     seconds++;
